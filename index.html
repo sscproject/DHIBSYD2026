@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DHI Bootcamp 2026 Proceedings</title>
+<meta name="description" content="Book of Proceedings – Asia-Pacific Digital Health Interoperability Bootcamp 2026, Sydney">
+<meta property="og:image" content="assets/banner.png">
+<style>
+  :root {
+    --navy: #0a2540;
+    --navy-deep: #061a2e;
+    --cyan: #3fb8e0;
+    --orange: #f08a3c;
+    --bg: #f3f6f9;
+    --card: #ffffff;
+    --text: #1c2b3a;
+    --muted: #5f6f80;
+    --line: #e1e7ee;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  header { background: var(--navy-deep); padding: 24px 0 56px; }
+  .banner { display: block; width: 100%; border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,.35); }
+  .kicker { margin: 22px 0 4px; color: var(--cyan); font-weight: 700; letter-spacing: .18em; text-transform: uppercase; font-size: .85rem; }
+  .intro { color: #c9d6e3; max-width: 680px; margin: 0; }
+
+  nav { margin-top: -26px; position: sticky; top: 8px; z-index: 5; }
+  .tabs { display: flex; gap: 6px; background: var(--card); border-radius: 12px; padding: 6px; box-shadow: 0 2px 10px rgba(0,0,0,.1); width: fit-content; max-width: 100%; overflow-x: auto; }
+  .tabs a { padding: 10px 18px; border-radius: 8px; text-decoration: none; color: var(--navy); font-weight: 600; white-space: nowrap; }
+  .tabs a:hover { background: #e8f6fc; }
+
+  main { padding: 16px 0 48px; }
+  .day { margin-top: 36px; scroll-margin-top: 80px; }
+  .day h2 { font-size: 1.45rem; margin: 0; color: var(--navy); }
+  .day h2 span { color: var(--orange); }
+  .day .date { color: var(--muted); margin: 4px 0 16px; }
+  .block { margin: 24px 0 10px; font-size: .95rem; color: var(--navy); border-left: 4px solid var(--orange); padding-left: 10px; }
+
+  .session { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  .time { flex: 0 0 72px; font-weight: 700; color: var(--cyan); font-variant-numeric: tabular-nums; font-size: .92rem; }
+  .info { flex: 1; min-width: 0; }
+  .info h3 { margin: 0; font-size: 1.02rem; }
+  .info p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
+  .btn { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: #fff; text-decoration: none; font-weight: 600; font-size: .88rem; padding: 9px 14px; border-radius: 8px; }
+  .btn:hover { background: var(--orange); }
+  .soon { flex: 0 0 auto; color: var(--muted); font-size: .85rem; font-style: italic; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+  .grid .session { margin: 0; }
+
+  .error { background: #fef2f2; color: #991b1b; padding: 14px; border-radius: 8px; }
+  footer { background: var(--navy-deep); color: #9fb2c5; text-align: center; font-size: .85rem; padding: 24px 16px; }
+
+  @media (max-width: 600px) {
+    header { padding-top: 16px; }
+    .session { flex-wrap: wrap; gap: 4px 12px; }
+    .time { flex-basis: 100%; }
+    .time:empty { display: none; }
+    .info { flex-basis: 100%; }
+    .btn, .soon { margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="banner" src="assets/banner.png" alt="Asia-Pacific Digital Health Interoperability Bootcamp 2026 – 18–20 October 2026, AWS Sydney. World Bank Group, Pacific Community, Australian Aid, CSIRO">
+    <p class="kicker" id="subtitle">Book of Proceedings</p>
+    <p class="intro" id="intro"></p>
+  </div>
+</header>
+
+<nav class="wrap"><div class="tabs" id="tabs"></div></nav>
+
+<main class="wrap" id="days"></main>
+
+<footer id="footer"></footer>
+
+<script>
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const button = pdf => pdf
+    ? `<a class="btn" href="${encodeURI(pdf)}" target="_blank" rel="noopener">⬇ PDF</a>`
+    : `<span class="soon">Coming soon</span>`;
+  // "Day 1 · Connected Care" -> "Day 1" in orange, theme in navy
+  const dayTitle = name => esc(name).replace(/^(.*?) · /, "<span>$1</span> · ");
+
+  fetch("sessions.json", { cache: "no-cache" })
+    .then(r => r.json())
+    .then(({ event, days, handouts = [] }) => {
+      document.title = event.title + " – " + event.subtitle;
+      document.getElementById("subtitle").textContent = event.subtitle;
+      document.getElementById("intro").textContent = event.intro || "";
+      document.getElementById("footer").textContent = event.title + " · " + event.dates + " · " + event.venue;
+
+      const tabs = days.map((d, i) => `<a href="#day${i + 1}">${esc(d.name.split(" · ")[0])}</a>`);
+      if (handouts.length) tabs.push(`<a href="#handouts">Handouts</a>`);
+      document.getElementById("tabs").innerHTML = tabs.join("");
+
+      document.getElementById("days").innerHTML = days.map((d, i) => `
+        <section class="day" id="day${i + 1}">
+          <h2>${dayTitle(d.name)}</h2>
+          <p class="date">${esc(d.date)}</p>
+          ${d.sessions.map(s => s.heading ? `<h4 class="block">${esc(s.heading)}</h4>` : `
+            <div class="session">
+              <div class="time">${esc(s.time)}</div>
+              <div class="info">
+                <h3>${esc(s.title)}</h3>
+                ${s.speakers ? `<p>${esc(s.speakers)}</p>` : ""}
+              </div>
+              ${button(s.pdf)}
+            </div>`).join("")}
+        </section>`).join("") + (handouts.length ? `
+        <section class="day" id="handouts">
+          <h2><span>Handouts</span> · Bootcamp Collateral</h2>
+          <p class="date">Pre-reads, one-pagers and briefs provided to delegates.</p>
+          <div class="grid">
+            ${handouts.map(h => `
+              <div class="session">
+                <div class="info"><h3>${esc(h.title)}</h3></div>
+                ${button(h.pdf)}
+              </div>`).join("")}
+          </div>
+        </section>` : "");
+
+      // A PDF that hasn't been uploaded yet shows as "Coming soon" instead of a broken link
+      document.querySelectorAll("a.btn").forEach(a =>
+        fetch(a.href, { method: "HEAD" })
+          .then(r => { if (!r.ok) throw 0; })
+          .catch(() => a.outerHTML = `<span class="soon">Coming soon</span>`));
+    })
+    .catch(() => {
+      document.getElementById("days").innerHTML =
+        `<p class="error">Could not load <code>sessions.json</code>. Check the file for a missing comma or quote.</p>`;
+    });
+</script>
+</body>
+</html>

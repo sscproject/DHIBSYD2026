@@ -1,0 +1,296 @@
+{
+  "event": {
+    "title": "Asia-Pacific Digital Health Interoperability Bootcamp 2026",
+    "subtitle": "Book of Proceedings",
+    "dates": "19–20 October 2026",
+    "venue": "AWS Sydney Office, Sydney, Australia",
+    "intro": "Presentations from the two bootcamp days: Connected Care through the International Patient Summary (IPS), and Digital Public Infrastructure for Health (DPI-H). Select a session to open or download its slides.",
+    "tagline": "Learn · Build · Connect · Transform"
+  },
+  "days": [
+    {
+      "name": "Day 1 · Connected Care",
+      "date": "Monday 19 October 2026 · Building country capability for shared patient summaries across facilities and borders using the International Patient Summary (IPS)",
+      "sessions": [
+        {
+          "time": "9:30am",
+          "title": "Welcome from our host AWS",
+          "speakers": "AWS",
+          "pdf": "presentations/d1-01-aws-welcome.pdf"
+        },
+        {
+          "time": "9:45am",
+          "title": "Formal Remarks and Acknowledgements",
+          "speakers": "Kate Ebrill, CSIRO · Rumanusina Maua, SPC",
+          "pdf": "presentations/d1-02-formal-remarks.pdf"
+        },
+        {
+          "time": "10:00am",
+          "title": "Australian e-Health Research Centre (AEHRC)",
+          "speakers": "David Hansen, AEHRC, CSIRO",
+          "pdf": "presentations/d1-03-aehrc.pdf"
+        },
+        {
+          "time": "10:15am",
+          "title": "World Bank Statement of Support: Support to PHIT countries and the region",
+          "speakers": "Margareta Norris Harrit, World Bank",
+          "pdf": "presentations/d1-04-world-bank-support.pdf"
+        },
+        {
+          "time": "10:30am",
+          "title": "Bootcamp Context Setting",
+          "speakers": "Umer Nisar, CSIRO · Rochelle Se Yun Eng, World Bank",
+          "pdf": "presentations/d1-05-context-setting.pdf"
+        },
+        {
+          "time": "10:45am",
+          "title": "Regional Perspective: Pacific",
+          "speakers": "Rumanusina Maua, SPC",
+          "pdf": "presentations/d1-06-regional-pacific.pdf"
+        },
+        {
+          "time": "",
+          "title": "Regional Perspective: Asia",
+          "speakers": "Jai Ganesh Udayasankaran, AeHIN",
+          "pdf": "presentations/d1-07-regional-asia.pdf"
+        },
+        {
+          "time": "",
+          "title": "Aligning Cross-Regional Priorities with Global Direction and Support",
+          "speakers": "Dr Alain Labrique, WHO",
+          "pdf": "presentations/d1-08-who-global-direction.pdf"
+        },
+        {
+          "time": "11:45am",
+          "title": "Connected Care: International Patient Summary (IPS)",
+          "speakers": "Diego Kaminker, HL7 International · Kate Ebrill, CSIRO",
+          "pdf": "presentations/d1-09-connected-care-ips.pdf"
+        },
+        {
+          "heading": "Deep Dive: How SDOs Enable Connected Care and Shared Patient Summaries"
+        },
+        {
+          "time": "12:00pm",
+          "title": "HL7 International: Standards and implementation support for the IPS",
+          "speakers": "Rachel Dunscombe · Diego Kaminker",
+          "pdf": "presentations/d1-10-hl7-international.pdf"
+        },
+        {
+          "time": "12:20pm",
+          "title": "openEHR: Logical information models and clinical modelling for reusable patient information",
+          "speakers": "Jordi Piera Jimenez",
+          "pdf": "presentations/d1-11-openehr.pdf"
+        },
+        {
+          "time": "2:00pm",
+          "title": "SNOMED International: Preserving clinical meaning across systems, facilities and borders",
+          "speakers": "Alejandro Lopez Osornio",
+          "pdf": "presentations/d1-12-snomed-international.pdf"
+        },
+        {
+          "time": "2:20pm",
+          "title": "Regenstrief Institute: Standardising laboratory results and clinical observations",
+          "speakers": "Marjorie Rallins",
+          "pdf": "presentations/d1-13-regenstrief.pdf"
+        },
+        {
+          "time": "2:50pm",
+          "title": "WHO-FIC: Insights and updates from the WHO-FIC Network Annual Meeting 2026",
+          "speakers": "Nenad Friedrich Ivan Kostanjsek",
+          "pdf": "presentations/d1-14-who-fic.pdf"
+        },
+        {
+          "time": "3:15pm",
+          "title": "Design Workshop: From Country Readiness to Regional Implementation",
+          "speakers": "Facilitated by HL7 and CSIRO",
+          "pdf": "presentations/d1-15-design-workshop.pdf"
+        },
+        {
+          "time": "4:00pm",
+          "title": "Regional Case Study: IPS Secure Project – ASEAN (AeHIN)",
+          "speakers": "Ms Nindya Ayuningtyas, Universitas Gadjah Mada (UGM), Indonesia",
+          "pdf": "presentations/d1-16-ips-secure-asean.pdf"
+        },
+        {
+          "time": "4:15pm",
+          "title": "Regional IPS Connectathon Proposal and Day 1 wrap-up",
+          "speakers": "Kate Ebrill, CSIRO",
+          "pdf": "presentations/d1-17-ips-connectathon.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Day 2 · Digital Public Infrastructure for Health",
+      "date": "Tuesday 20 October 2026 · Learning from Digital Public Infrastructure for Health (DPI-H): experiences and building country readiness",
+      "sessions": [
+        {
+          "time": "9:00am",
+          "title": "Recap Day 1: Connecting the journey from standards to Digital Public Infrastructure",
+          "speakers": "Kate Ebrill, CSIRO",
+          "pdf": "presentations/d2-01-recap.pdf"
+        },
+        {
+          "time": "9:15am",
+          "title": "WHO Reference Architecture for Digital Public Infrastructure for Health (DPI-H)",
+          "speakers": "Garrett Mehl, WHO · Jordi Piera Jimenez, openEHR · Umer Nisar, CSIRO",
+          "pdf": "presentations/d2-02-who-dpih-architecture.pdf"
+        },
+        {
+          "time": "10:00am",
+          "title": "World Bank Digital Health Blueprint Toolkit",
+          "speakers": "Ali Habib, World Bank · Shivnay Naidu, World Bank",
+          "pdf": "presentations/d2-03-world-bank-blueprint.pdf"
+        },
+        {
+          "heading": "10:15am · DPI-H Country Exemplars and Implementation Journeys"
+        },
+        {
+          "time": "",
+          "title": "Australia: Health Connect – National HIE Program",
+          "speakers": "ADHA",
+          "pdf": "presentations/d2-04-australia-health-connect.pdf"
+        },
+        {
+          "time": "",
+          "title": "Fiji: Insights from Digital Health Strategy",
+          "speakers": "Shaneel Prakash, MHMS Fiji",
+          "pdf": "presentations/d2-05-fiji.pdf"
+        },
+        {
+          "time": "",
+          "title": "Philippines: Aklan LHIE",
+          "speakers": "Ms Cherrie Esteban, DOH Philippines · Dr Leslie Sedillo, PHO Aklan",
+          "pdf": "presentations/d2-06-philippines-aklan.pdf"
+        },
+        {
+          "time": "",
+          "title": "Indonesia: SATUSEHAT",
+          "speakers": "Ms Nindya Widita Ayuningtyas, UGM, Indonesia",
+          "pdf": "presentations/d2-07-indonesia-satusehat.pdf"
+        },
+        {
+          "time": "",
+          "title": "Mongolia: FHIR Adoption and DPI-H",
+          "speakers": "Dr Damba Ganzorig · Dr Batchingis Chinbold, Health Development Center",
+          "pdf": "presentations/d2-08-mongolia.pdf"
+        },
+        {
+          "time": "",
+          "title": "India: ABDM – Ayushman Bharat Digital Mission",
+          "speakers": "Manisha Mantri, C-DAC, India",
+          "pdf": "presentations/d2-09-india-abdm.pdf"
+        },
+        {
+          "heading": "11:45am · DPI-H Australia: Lessons Learned and Best Practices"
+        },
+        {
+          "time": "",
+          "title": "National Clinical Terminology Service",
+          "speakers": "AEHRC, CSIRO",
+          "pdf": "presentations/d2-10-ncts.pdf"
+        },
+        {
+          "time": "",
+          "title": "My Health Record",
+          "speakers": "ADHA",
+          "pdf": "presentations/d2-11-my-health-record.pdf"
+        },
+        {
+          "time": "",
+          "title": "National Health Services Directory",
+          "speakers": "Bettina McMahon, Healthdirect",
+          "pdf": "presentations/d2-12-nhsd.pdf"
+        },
+        {
+          "time": "",
+          "title": "Royal Flying Doctor Service",
+          "speakers": "Shaun Francis, RFDS",
+          "pdf": "presentations/d2-13-rfds.pdf"
+        },
+        {
+          "time": "2:00pm",
+          "title": "Global Digital Health Partnership (GDHP)",
+          "speakers": "",
+          "pdf": "presentations/d2-14-gdhp.pdf"
+        },
+        {
+          "heading": "2:15pm · Building Trust Frameworks and Cross-Border Health Data Sharing Networks"
+        },
+        {
+          "time": "",
+          "title": "Global Digital Health Certification Network",
+          "speakers": "Matthew Keks, WHO",
+          "pdf": "presentations/d2-15-gdhcn.pdf"
+        },
+        {
+          "time": "",
+          "title": "European Health Data Space",
+          "speakers": "Jim Bloemberg, Ministry of Health, Welfare and Sport, Netherlands",
+          "pdf": "presentations/d2-16-ehds.pdf"
+        },
+        {
+          "time": "",
+          "title": "Australia",
+          "speakers": "Kate Deere, DHDA",
+          "pdf": "presentations/d2-17-australia-trust.pdf"
+        },
+        {
+          "time": "",
+          "title": "Canada",
+          "speakers": "Andrew Liu, Canada Health Infoway",
+          "pdf": "presentations/d2-18-canada.pdf"
+        },
+        {
+          "time": "3:30pm",
+          "title": "DPI-H Capability Pathway for Countries",
+          "speakers": "Facilitated by CSIRO",
+          "pdf": "presentations/d2-19-capability-pathway.pdf"
+        },
+        {
+          "time": "4:30pm",
+          "title": "Regional DPI-H Action Plan, Wrap-up and Closing",
+          "speakers": "Umer Nisar, CSIRO · Rumanusina Maua, SPC · Alvin Marcelo, AeHIN",
+          "pdf": "presentations/d2-20-action-plan-closing.pdf"
+        }
+      ]
+    }
+  ],
+  "handouts": [
+    {
+      "title": "Bootcamp Agenda",
+      "pdf": "handouts/C1-Bootcamp-Agenda.pdf"
+    },
+    {
+      "title": "Delegation Pre-Read",
+      "pdf": "handouts/C2-Delegation-Pre-Read.pdf"
+    },
+    {
+      "title": "Logistics Note",
+      "pdf": "handouts/C3-Logistics-Note.pdf"
+    },
+    {
+      "title": "PHIT Sydney Bootcamp One-Pager",
+      "pdf": "handouts/C4-PHIT-Bootcamp-One-Pager.pdf"
+    },
+    {
+      "title": "IPS Delegation Pre-Read",
+      "pdf": "handouts/C5-IPS-Delegation-Pre-Read.pdf"
+    },
+    {
+      "title": "CSIRO SSCP Project One-Pager",
+      "pdf": "handouts/C6-CSIRO-SSCP-One-Pager.pdf"
+    },
+    {
+      "title": "CSIRO SSCP LBC Framework Poster",
+      "pdf": "handouts/C7-CSIRO-SSCP-LBC-Framework-Poster.pdf"
+    },
+    {
+      "title": "CSIRO AEHRC SPARKED Brief",
+      "pdf": "handouts/C8-CSIRO-AEHRC-SPARKED-Brief.pdf"
+    },
+    {
+      "title": "WHO/ITU DPI-H Reference Architecture Brief",
+      "pdf": "handouts/WHO-DPI-H-Reference-Architecture-Brief.pdf"
+    }
+  ]
+}
